@@ -388,10 +388,10 @@ form .btn-center2 {
 nav .fa-solid {
   display: none;
 }
-@media only screen and (max-width: 600px) {
-  /* #header {
+@media only screen and (max-width: 950px) {
+  #header {
     background-image: url(images/small-background.png);
-  } */
+  }
   .header-text {
     margin-top: 100%;
     font-size: 16px;
@@ -450,7 +450,7 @@ nav .fa-solid {
   }
 }
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 950px) {
   h1 {
     font-size: 32px;
   }
@@ -463,11 +463,7 @@ nav .fa-solid {
     font-size: 18px;
   }
 }
-@media only screen and (max-width: 1500px) {
-  #header {
-    background-image: url(images/small-background.png);
-  }
-}
+
 
 /*  */
 #msg {
