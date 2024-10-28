@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/K.jpg" />
+    <title>Personal Portfolio - Kaynat Mozammil</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/c9294f895d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <nav class="navbar">
+        <div>
+          <a href="index.html"
+            ><div class="logo-container">
+              <img src="./images/K.jpg" class="logo" />
+              <div class="logo-text">aynat</div>
+            </div></a
+          >
+        </div>
+        <div class="menu">
+          <ul id="sidemenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li>
+              <a href="images/resume.pdf" download target="_blank">Resume</a>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+          </ul>
+        </div>
+
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="container">
+        <div class="header-text">
+          <div class="text">
+            <span class="subheading">Hello!</span>
+            <h1 class="">I'm <span>Kaynat Mozammil</span></h1>
+
+            <!-- Element to contain animated typing -->
+            <span id="typing-animation"></span>
+
+            <script>
+              const typingTexts = [
+                "Coder",
+                "Front-end developer",
+                "Engineer  ",
+                "Back-end developer",
+                "Data Scientist  ",
+                "Full Stack Developer   ",
+              ];
+              let i = 0;
+
+              function playTypingAnimation() {
+                let text = typingTexts[i];
+                typingAnimationElement.textContent = "";
+                let j = 0;
+                let typingInterval = setInterval(() => {
+                  if (j < text.length) {
+                    typingAnimationElement.textContent += text[j++];
+                  } else {
+                    clearInterval(typingInterval);
+                    i = (i + 1) % typingTexts.length;
+                    setTimeout(playTypingAnimation, 1000);
+                  }
+                }, 200);
+              }
+
+              const typingAnimationElement =
+                document.getElementById("typing-animation");
+              playTypingAnimation();
+            </script>
+
+            <br />
+            <h2>Aspiring Data Scientist</h2>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/kaynatmozammil"
+                class="btn"
+                target="_blank"
+                >LinkedIn</a
+              >
+              <a
+                href="https://github.com/kaynatmozammil"
+                class="btn"
+                target="_blank"
+                >My works</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------- About----------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              As a computer engineering student, I'm excited to dive deep into
+              the world of technology. My goal is to become a skilled data
+              scientist and developer, with a strong command of various
+              programming languages. I enjoy challenges that help me grow,
+              whether it's analyzing data, writing efficient code, or developing
+              innovative solutions. Each course and project I work on brings me
+              one step closer to making a real impact in the field of computer
+              science. What drives me is the desire to understand how technology
+              influences our world and to contribute meaningfully to its
+              advancement.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Data Science & Machine Learning:</span><br />
+                  Pandas, Matplotlib, Seaborn
+                </li>
+                <li>
+                  <span>Technologies & Frameworks:</span><br />
+                  HTML5, CSS3, Bootstrap , TailwindCSS, SQL
+                </li>
+
+                <li>
+                  <span>Programming Languages: </span><br />
+                  Python, C++, C ,Javascript, Java , php
+                </li>
+                <li>
+                  <span>Database Systems:</span><br />
+                  MySQL
+                </li>
+                <li>
+                  <span>Tools:</span><br />
+                  Jupyter Notebook, Git,GitHub, VS Code , Pycharm , intelliJ
+                  IDEA
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Diploma in Computer Engineering</span><br />
+                  Jamia Millia Islamia , New Delhi - 110025 <br />
+                  2022 - Present <br />Result: Awaited
+                </li>
+                <li>
+                  <span>High School</span><br />
+                  Rosera High School Rosera , Samastipur
+                  <br />2020 - 2021<br />Result: 85%
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Intern, UPSTAIRS APPLIED TECH pvt.ltd</span> <br />
+                  June 2024 - July 2024 <br />
+                  Developer
+                </li>
+                <li>
+                  <!-- <span
+                    >Volunteer, DR. Zakir Husain Hall Of Boys'Residence , Jamia
+                    Millia Islamia</span
+                  >
+                  <br />April 2024<br />A Volunteer in The Annual Function -->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- My Services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <!-- <i class="fa-solid fa-database"></i> -->
+            <h2>Data Scientist</h2>
+            <p>
+              As a beginner data scientist, I offer foundat- ional data analysis
+              services, including data cleaning and exploratory analysis to help
+              org- anizations understand their datasets better. I can create
+              simple visualizations to present insights clearly and effectively.
+              Additionally, I provide basic predictive modeling using machine
+              learning algorithms to forecast trends and outcomes. My goal is to
+              assist in turning raw data into actionable insights that drive
+              decision-making.
+            </p>
+            <!-- <a href="#">Learn more</a> -->
+          </div>
+
+          <div>
+            <!-- <i class="fa-solid fa-web-awesome"></i> -->
+            <h2>Web Developer</h2>
+            <p>
+              Designed and developed responsive, user-friendly websites using
+              HTML, CSS, JavaScript, and frameworks like React and Bootstrap.
+              Created custom web applications with dynamic features to enhance
+              user experience and streamline functionality. Focused on clean,
+              maintainable code and optimized performance for faster load times.
+              Integrated back-end systems using APIs and databases to support
+              robust, scalable solutions.
+            </p>
+            <!-- <a href="#">Learn more</a> -->
+          </div>
+
+          <div>
+            <!-- <i class="fa-brands fa-think-peaks"></i> -->
+            <h2>Critical Thinking</h2>
+            <p>
+              I offer critical thinking services to help organizations address
+              complex challenges. By analyzing problems from different angles
+              and breaking them down into manageable parts, I provide clear
+              solutions that support better decision-making. My approach
+              involves identifying the root causes of issues and suggesting
+              practical strategies to tackle them. This service is perfect for
+              businesses looking to improve their processes and find innovative
+              solutions.
+            </p>
+            <!-- <a href="#">Learn more</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+
+        <h2>
+          Below are the sample Data Analytics projects and Web Development
+          Projects
+        </h2>
+
+        <div class="projects-list">
+          <div class="project">
+            <img src="images/mlp-brs.jpg" alt="" />
+            <div class="layer">
+              <h3>Book-Recommendation-System</h3>
+              <p>
+                The Book Recommendation System is a web application that offers
+                personalized book suggestions using Flask and Pandas.
+              </p>
+              <a
+                target="_blank"
+                href="https://github.com/kaynatmozammil/Book-Recommendation-System"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="images/start-up.png" alt="" />
+            <div class="layer">
+              <h3>Start-up Analysis - Dashboeard</h3>
+              <p>
+                About This project is a Streamlit-based web app for analyzing
+                startup funding data.
+              </p>
+              <a href="https://github.com/kaynatmozammil/StartUp-Dashboard"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="images/mrs.png" alt="" />
+            <div class="layer">
+              <h3>Book-Recommendation-System</h3>
+              <p>
+                About A machine learning project that provides personalized
+                movie recommendations based on user preferences.
+              </p>
+              <a
+                href="https://github.com/kaynatmozammil/Book-Recommendation-System"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Web Development 1-->
+
+          <div class="project">
+            <img src="images/razorPay.png" alt="" />
+            <div class="layer">
+              <h3>RazorPay Clone</h3>
+              <p>
+                Designing a Razorpay clone with HTML and Tailwind CSS focuses on
+                replicating the clean layout, responsive design, and key UI
+                elements like buttons and forms.
+              </p>
+              <a
+                href="https://github.com/kaynatmozammil/Book-Recommendation-System"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Web Development 2-->
+          <div class="project">
+            <img src="images/WheaterApp.png" alt="" />
+            <div class="layer">
+              <h3>Wheather App</h3>
+              <p>
+                Develop a WheatherApp that gives the Wheather information all
+                around the world wide
+              </p>
+              <a
+                href="https://github.com/kaynatmozammil/Book-Recommendation-System"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Web Development 3-->
+          <div class="project">
+            <img src="images/mrs.png" alt="" />
+            <div class="layer">
+              <h3>Book-Recommendation-System</h3>
+              <p>
+                About A machine learning project that provides personalized
+                movie recommendations based on user preferences.
+              </p>
+              <a
+                href="https://github.com/kaynatmozammil/Book-Recommendation-System"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="https://github.com/kaynatmozammil?tab=repositories"
+          target="_blank"
+          class="btn-center"
+          >See more</a
+        >
+      </div>
+    </div>
+
+    <!-- --------contact---------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <h2>Question, thoughts, or just want to say hello?</h2>
+            <p>
+              <a href="mailto:kaynatmozammil@gmail.com"
+                ><i class="fa-solid fa-envelope"></i>
+                kaynatmozammil@gmail.com</a
+              >
+            </p>
+            <p>
+              <a href="tel://9341231811">
+                <i class="fa-solid fa-square-phone"></i> + 91 93412 31811</a
+              >
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/kaynatmozammil"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://twitter.com/kaynat_mozammil" target="_blank"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+              <a href="https://www.instagram.com/kaynatmozammil" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.facebook.com/kaynatmozammil1" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.youtube.com/@kaynatmozammil" target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+
+            <a
+              href="images/kaynat's cv.pdf"
+              target="_blank"
+              class="btn-center btn-center2"
+              download
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button class="btn-center btn-center2" type="submit">Send</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright &copy;All rights reserved | This is made with
+          <i class="fa-solid fa-heart"></i> by Kaynat
+        </p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwlrQcPVHx6xQ8rJ3QKLHMlKSlVsTztAxQOBjDLUnsFcGN5rAy7o6-UgINIFA04pVflwA/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      const msg = document.getElementById("msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
